@@ -1,4 +1,3 @@
-// import { Step } from '@material-ui/core'
 import React, { useState } from "react";
 import { StepTwoContainer, ImageDiv } from "./StepTwo.style";
 

@@ -10,6 +10,7 @@ import {
 import StepOne from "../steps/stepOne/StepOne";
 import StepFour from "../steps/StepFour/StepFour";
 import StepTwo from "../steps/StepTwo/StepTwo";
+import StepThree from "../steps/StepThree.js/StepThree";
 
 const useStyles = makeStyles({
   root: {
@@ -17,8 +18,8 @@ const useStyles = makeStyles({
     margin: "6rem auto",
     // border: "1px solid #999",
     "& .MuiStepIcon-root": {
-    //   color: "rgba(0, 0, 0, 0.38)",
-    color: "transparent",
+      //   color: "rgba(0, 0, 0, 0.38)",
+      color: "transparent",
       border: "2px solid rgb(555,255,255)",
       borderRadius: "50%",
     },
@@ -47,7 +48,7 @@ const useStyles = makeStyles({
     "& .MuiButton-text": {
       /* padding: 6px 8px; */
       backgroundColor: "#fff",
-       marginTop: "2rem",
+      marginTop: "2rem",
       width: "9%",
       padding: "1rem 0",
     },
@@ -94,7 +95,12 @@ const MultiStepForm = () => {
           />
         );
       case 2:
-        return "Step Three (Category)";
+        return (
+          <StepThree
+            updateSelection={updateSelectedTypicalDrive}
+            selectedTypicalDrive={selectedTypicalDrive}
+          />
+        );
       case 3:
         return <StepFour />;
       default:

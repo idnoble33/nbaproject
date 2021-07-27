@@ -1,13 +1,14 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StepTwoContainer = styled.div`
-section {
+  margin-top: 10%;
+  section {
     color: #fff;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 2rem;
-}
-button{
+  }
+  button {
     background: black;
     color: #fff;
     margin-right: 1rem;
@@ -16,13 +17,13 @@ button{
     font-weight: 500;
     border: 1px solid black;
     font-size: 1.2rem;
-}
+  }
 
-.selected {
-    background:  #fff;
+  .selected {
+    background: #fff;
     color: #000;
   }
-`
+`;
 export const ImageDiv = styled.div`
   position: cover;
   top: -50%;
@@ -42,7 +43,7 @@ export const ImageDiv = styled.div`
     min-height: 50%;
     z-index: -1;
     background-size: cover;
-    background-attachment:fixed;
+    background-attachment: fixed;
     /* height: 100vh; */
   }
-  `
+`;
