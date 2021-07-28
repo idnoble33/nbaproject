@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { StepThreeContainer } from "./StepThree.style";
+import { StepThreeContainer, Section } from "./StepThree.style";
 
 const StepThree = ({ updateSelection, selectedTypicalDrive }) => {
   const featureWanted = [
@@ -35,20 +35,32 @@ const StepThree = ({ updateSelection, selectedTypicalDrive }) => {
   };
   return (
     <StepThreeContainer>
+      <header>
+        <p> What are your must haves ?</p>
+      </header>
+      <section>Please select up to 3</section>
       <div className="main">
         {featureWanted.map((value, index) => (
-          <div className="category" key={index}>
+          <div className="category " key={index}>
             <div className="featureImages">
               <img
                 src={value.img}
                 alt={value.alt}
                 onClick={() => updatedSelectedArea(value)}
                 className={`${
-                  selectedTypicalDrive.includes(value.valueType) ? "selected" : ""
+                  selectedTypicalDrive.includes(value.valueType)
+                    ? "selected"
+                    : ""
                 }`}
               />
             </div>
             <div className="valueLable">{value.valueType}</div>
+            <div className="featuresBg">
+              {value.valueType === lastSelectedArea &&
+                selectedTypicalDrive.length > 0 && (
+                  <img src={value.img} alt={value.alt} />
+                )}
+            </div>
           </div>
         ))}
       </div>

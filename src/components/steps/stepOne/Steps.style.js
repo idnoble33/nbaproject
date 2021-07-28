@@ -82,7 +82,7 @@ export const ImageDiv = styled.div`
     z-index: -1;
     background-size: cover; 
     background-attachment:fixed;
-    /* height: auto; */
+    filter:brightness(40%);
   }
   .selected {
     border: 2px solid #fff;

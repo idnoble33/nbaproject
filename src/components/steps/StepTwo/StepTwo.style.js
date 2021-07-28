@@ -44,6 +44,7 @@ export const ImageDiv = styled.div`
     z-index: -1;
     background-size: cover;
     background-attachment: fixed;
+    filter: brightness(50%);
     /* height: 100vh; */
   }
 `;
