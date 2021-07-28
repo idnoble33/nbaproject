@@ -28,7 +28,6 @@ const StepThree = ({ updateSelection, selectedTypicalDrive }) => {
     },
   ];
   const [lastSelectedArea, setLastSelectedArea] = useState(null);
-
   const updatedSelectedArea = (area) => {
     updateSelection(area.valueType);
     setLastSelectedArea(area.valueType);
@@ -41,7 +40,7 @@ const StepThree = ({ updateSelection, selectedTypicalDrive }) => {
       <section>Please select up to 3</section>
       <div className="main">
         {featureWanted.map((value, index) => (
-          <div className="category " key={index}>
+          <div className="category" key={index}>
             <div className="featureImages">
               <img
                 src={value.img}
