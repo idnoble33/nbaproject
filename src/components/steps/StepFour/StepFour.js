@@ -4,12 +4,20 @@ import "./StepFour.css";
 
 function StepFour() {
   return (
+  //   <div>
+  //   <div className="container">
+  //     <div className="MuiStepIcon-text audi1"></div>
+  //     <div className="MuiStepIcon-text audi2"></div>
+  //     <div className="MuiStepIcon-text audi3"></div>
+  //     <div className="MuiStepIcon-text audi4"></div>
+  //   </div>
+  // </div>
     <div>
-      <div class="container">
-        <div class="ring audi1"></div>
-        <div class="ring audi2"></div>
-        <div class="ring audi3"></div>
-        <div class="ring audi4"></div>
+      <div className="container">
+        <div className="ring audi1"></div>
+        <div className="ring audi2"></div>
+        <div className="ring audi3"></div>
+        <div className="ring audi4"></div>
       </div>
     </div>
   );

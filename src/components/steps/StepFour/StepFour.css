@@ -56,3 +56,8 @@
      animation: ring4 2s linear;
      margin-left: -2rem;
    }
+   .MuiStepIcon-text {
+    fill: transparent;
+    color: #000;
+    background: #fff;
+}

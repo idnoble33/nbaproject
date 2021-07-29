@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { StepThreeContainer, Section } from "./StepThree.style";
+import { StepThreeContainer } from "./StepThree.style";
 
 const StepThree = ({ updateSelection, selectedTypicalDrive }) => {
   const featureWanted = [

@@ -1,22 +1,16 @@
 import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import { Div } from "./Multistep.style";
 import {
   Stepper,
   Step,
   StepLabel,
+  // Typography,
   Button,
 } from "@material-ui/core";
 import StepOne from "../steps/stepOne/StepOne";
 import StepFour from "../steps/StepFour/StepFour";
 import StepTwo from "../steps/StepTwo/StepTwo";
 import StepThree from "../steps/StepThree.js/StepThree";
-
-const useStyles = makeStyles({
-  root: {
-    margin: "6rem auto",
-  },
-});
 
 const MultiStepForm = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -70,18 +64,20 @@ const MultiStepForm = () => {
         return "unknown Step";
     }
   }
-  const classes = useStyles();
+  // const classes = useStyles();
   return (
-    <Div className={classes.root}>
-      <Stepper activeStep={activeStep} alternativeLabel>
-        {steps.map((label, labelIndex) => (
-          <Step key={label}>
-            <StepLabel onClick={() => setActiveStep(labelIndex)}>
-              {label}
-            </StepLabel>
-          </Step>
-        ))}
-      </Stepper>
+    <Div>
+      {activeStep < steps.length - 1 && (
+        <Stepper activeStep={activeStep} alternativeLabel>
+          {steps.map((label, labelIndex) => (
+            <Step key={label}>
+              <StepLabel onClick={() => setActiveStep(labelIndex)}>
+                {activeStep < steps.length - 1 ? label : null}
+              </StepLabel>
+            </Step>
+          ))}
+        </Stepper>
+      )}
       {activeStep === steps.length ? (
         "The step completed"
       ) : (

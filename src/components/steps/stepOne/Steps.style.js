@@ -77,8 +77,10 @@ export const ImageDiv = styled.div`
     right: 0;
     bottom: 0;
     margin: auto;
-    min-width: 50%;
-    min-height: 50%;
+    /* min-width: 50%;
+    min-height: 50%; */
+    width: 100%;
+      height: 100%;
     z-index: -1;
     background-position: center center;
       background-size: cover;

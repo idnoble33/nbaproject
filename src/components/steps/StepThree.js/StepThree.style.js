@@ -59,8 +59,10 @@ margin-top: 5rem;
       right: 0;
       bottom: 0;
       margin: auto;
-      min-width: 100%;
-      min-height: 100%;
+      /* min-width: 100%;
+      min-height: 100%; */
+      width: 100%;
+      height: 100%;
       z-index: -1;
       background-position: center center;
       background-size: cover;

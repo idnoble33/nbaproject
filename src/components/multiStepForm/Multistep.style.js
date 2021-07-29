@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
+  margin: 6rem auto;
   .MuiStepIcon-root {
     //   color: "rgba(0, 0, 0, 0.38)",
     color: transparent;
