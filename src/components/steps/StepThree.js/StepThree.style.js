@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StepThreeContainer = styled.div`
-margin-top: 8rem;
+margin-top: 5rem;
   .main {
     /* background: #fff; */
     text-align: center;
@@ -62,8 +62,10 @@ margin-top: 8rem;
       min-width: 100%;
       min-height: 100%;
       z-index: -1;
+      background-position: center center;
       background-size: cover;
       background-attachment: fixed;
       filter: brightness(30%);
+      overflow: none;
     }
 `;

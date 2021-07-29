@@ -80,8 +80,10 @@ export const ImageDiv = styled.div`
     min-width: 50%;
     min-height: 50%;
     z-index: -1;
-    background-size: cover; 
-    background-attachment:fixed;
+    background-position: center center;
+      background-size: cover;
+      background-attachment: fixed;
+      overflow: none;
     filter:brightness(40%);
   }
   .selected {
