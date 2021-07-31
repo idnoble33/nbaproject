@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 import { Div } from "./Multistep.style";
-import {
-  Stepper,
-  Step,
-  StepLabel,
-  // Typography,
-  Button,
-} from "@material-ui/core";
-import StepOne from "../steps/stepOne/StepOne";
-import StepFour from "../steps/StepFour/StepFour";
-import StepTwo from "../steps/StepTwo/StepTwo";
-import StepThree from "../steps/StepThree.js/StepThree";
+import { Stepper, Step, StepLabel, Button } from "@material-ui/core";
+import StepOne from "../Steps/StepOne/StepOne";
+import StepTwo from "../Steps/StepTwo/StepTwo";
+import StepThree from "../Steps/StepThree/StepThree";
+import StepFour from "../Steps/StepFour.js/StepFour";
+import StepFive from "../Steps/StepFive/StepFive";
 
 const MultiStepForm = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -39,32 +34,43 @@ const MultiStepForm = () => {
     switch (stepIndex) {
       case 0:
         return (
-          <StepOne
+          <StepTwo
             updateSelection={updateSelectedTypicalDrive}
             selectedTypicalDrive={selectedTypicalDrive}
           />
         );
       case 1:
         return (
-          <StepTwo
+          <StepThree
             updateSelection={updateSelectedTypicalDrive}
             selectedTypicalDrive={selectedTypicalDrive}
           />
         );
       case 2:
         return (
-          <StepThree
+          <StepFour
             updateSelection={updateSelectedTypicalDrive}
             selectedTypicalDrive={selectedTypicalDrive}
           />
         );
       case 3:
-        return <StepFour />;
+        return (
+          <StepFive
+            updateSelection={updateSelectedTypicalDrive}
+            selectedTypicalDrive={selectedTypicalDrive}
+          />
+        );
+      // case 4:
+      //   return (
+      //     <StepFive
+      //       updateSelection={updateSelectedTypicalDrive}
+      //       selectedTypicalDrive={selectedTypicalDrive}
+      //     />
+       // );
       default:
         return "unknown Step";
     }
   }
-  // const classes = useStyles();
   return (
     <Div>
       {activeStep < steps.length - 1 && (
@@ -72,12 +78,13 @@ const MultiStepForm = () => {
           {steps.map((label, labelIndex) => (
             <Step key={label}>
               <StepLabel onClick={() => setActiveStep(labelIndex)}>
+                {/* {label} */}
                 {activeStep < steps.length - 1 ? label : null}
               </StepLabel>
             </Step>
           ))}
         </Stepper>
-      )}
+       )} 
       {activeStep === steps.length ? (
         "The step completed"
       ) : (

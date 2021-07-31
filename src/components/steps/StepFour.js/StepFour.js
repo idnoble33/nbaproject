@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { StepThreeContainer } from "./StepThree.style";
+import { StepThreeContainer } from "./StepFour.style";
 
-const StepThree = ({ updateSelection, selectedTypicalDrive }) => {
+const StepFour = ({ updateSelection, selectedTypicalDrive }) => {
   const featureWanted = [
     { valueType: "Luxury", img: "images/luxury.jpg", alt: "luxury car image" },
     {
@@ -67,4 +67,4 @@ const StepThree = ({ updateSelection, selectedTypicalDrive }) => {
   );
 };
 
-export default StepThree;
+export default StepFour;

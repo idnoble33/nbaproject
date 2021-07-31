@@ -1,55 +1,35 @@
-import React, { useState } from "react";
-import { StepTwoContainer, ImageDiv } from "./StepTwo.style";
-
-const StepTwo = ({ updateSelection, selectedTypicalDrive }) => {
-  const fuelPriority = [
-    {
-      value: "Very important",
-      img: "images/veryimportant.jpg",
-      alt: "veryimportant-car-image",
-    },
-    {
-      value: "Somewhat Important",
-      img: "images/somewhatimportant.jpg",
-      alt: "somewhatimportant-car-image",
-    },
-    {
-      value: "Not Important",
-      img: "images/notimportant.jpg",
-      alt: "city-car-image",
-    },
-  ];
-  const [lastSelectedArea, setLastSelectedArea] = useState(null);
-
-  const updatedSelectedArea = (area) => {
-    updateSelection(area.value);
-    setLastSelectedArea(area.value);
-  };
+import * as React from 'react';
+import Box from '@material-ui/core/Box';
+import Slider from '@material-ui/core/Slider'
+import {MainDiv} from './StepTwo.style'
+const marks = [
+  { value: 2, label: '2 seats' },
+  { value: 50, label: '5 seats' },
+  {value: 100, label: '7 seats'},
+]
+function valueText(value) {
+  return `${value}`
+}
+const valueLabelFormat = (value) => {
+ return marks.findIndex((mark) => mark.value === value) + 1
+}
+const StepTwo = () => {
   return (
-    <div>
-      <StepTwoContainer className="StepTwoContainer">
-        <div>
-          <section>A fuel-efficient Vehicle is</section>
-        </div>
-        <div>
-          {fuelPriority.map((fuel, fuelIndex) => (
-            <ImageDiv key={fuelIndex}>
-              <button
-                onClick={() => updatedSelectedArea(fuel)}
-                className={`${
-                  selectedTypicalDrive.includes(fuel.value) ? "selected" : ""
-                }`}
-              >
-                {fuel.value}
-              </button>
-              {fuel.value === lastSelectedArea &&
-                selectedTypicalDrive.length > 0 && <img src={fuel.img} alt={fuel.alt} />}
-            </ImageDiv>
-          ))}
-        </div>
-      </StepTwoContainer>
-    </div>
-  );
-};
+   
+    <MainDiv>
+      <Box sx={{ width: 300, marginLeft: 50}}>
+        <Slider
+          aria-label="restricted values"
+          defaultValue={0}
+          valueLabelFormat={valueLabelFormat}
+          getAriaValueText={valueText}
+          step={null}
+          valueLabelDisplay="auto"
+          marks={marks}
+        />
+      </Box>
+    </MainDiv>
+  )
+}
 
-export default StepTwo;
+export default StepTwo

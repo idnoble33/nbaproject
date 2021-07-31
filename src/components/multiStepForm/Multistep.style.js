@@ -35,8 +35,13 @@ export const Div = styled.div`
     margin-top: 2rem;
     width: 17%;
     padding: 1rem 0;
-    & .MuiButton-text::hover {
+    /* & .MuiButton-text:hover {
       background: #fff;
-    }
+    } */
   }
+  
+    .MuiButtonBase-root:hover {
+      background: #fff;
+    } 
+ 
 `;

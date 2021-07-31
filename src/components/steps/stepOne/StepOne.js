@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Main, Section, Button, ImageDiv } from "./Steps.style";
+import { Main, Section, Button, ImageDiv } from "./StepOne.style";
 
 const StepOne = ({ updateSelection, selectedTypicalDrive }) => {
   const driveArea = [
