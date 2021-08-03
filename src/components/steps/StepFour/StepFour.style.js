@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StepThreeContainer = styled.div`
-margin-top: 5rem;
+/* margin-top: 5rem; */
   .main {
     /* background: #fff; */
     text-align: center;
@@ -14,7 +14,7 @@ margin-top: 5rem;
   }
   .valueLable {
     color: #fff;
-    margin: 0.7rem;
+    /* margin: 0.7rem; */
   }
   .selected {
     border: 3px solid #fff;
@@ -30,7 +30,7 @@ margin-top: 5rem;
       font-stretch: var(--typography-copy1-fontStretch-d4d7a2f8);
       line-height: var(--typography-copy1-lineHeight-d4d7a2f8);
       -webkit-font-smoothing: antialiased;
-      margin: 1rem 0;
+      /* margin: 1rem 0; */
     }
     p {
       margin: 0px;
