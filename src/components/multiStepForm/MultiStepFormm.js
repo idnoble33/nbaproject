@@ -1,5 +1,6 @@
+
 import React, { useState } from "react";
-import { Div, myDiv } from "./Multistep.style";
+import { Div } from "./Multistep.style";
 import { Stepper, Step, StepLabel, Button } from "@material-ui/core";
 import StepOne from "../Steps/StepOne/StepOne";
 import StepTwo from "../Steps/StepTwo/StepTwo";
@@ -23,9 +24,7 @@ const MultiStepForm = () => {
   };
 
   function getSteps() {
-    // return ["Family", "Fuel", "Category", "Animation"];
-    return ["Fa", "Fu", "Ca", "Ani"];
-
+    return ["Family", "Fuel", "Category", "Animation"];
   }
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -62,26 +61,31 @@ const MultiStepForm = () => {
             selectedTypicalDrive={selectedTypicalDrive}
           />
         );
+      // case 4:
+      //   return (
+      //     <StepFive
+      //       updateSelection={updateSelectedTypicalDrive}
+      //       selectedTypicalDrive={selectedTypicalDrive}
+      //     />
+       // );
       default:
         return "unknown Step";
     }
   }
   return (
     <Div>
-      {/* {activeStep < steps.length - 1 && (
-          <Stepper activeStep={activeStep} alternativeLabel>
-            {steps.map((label, labelIndex) => (
-              // <div >
-              <Step key={label}>
-                <StepLabel onClick={() => setActiveStep(labelIndex)}>
-                  {label}
-                  {activeStep < steps.length - 1 ? label : null}
-                </StepLabel>
-              </Step>
-              // </div>
-            ))}
-          </Stepper>
-      )}
+      {activeStep < steps.length - 1 && (
+        <Stepper activeStep={activeStep} alternativeLabel>
+          {steps.map((label, labelIndex) => (
+            <Step key={label}>
+              <StepLabel onClick={() => setActiveStep(labelIndex)}>
+                {/* {label} */}
+                {activeStep < steps.length - 1 ? label : null}
+              </StepLabel>
+            </Step>
+          ))}
+        </Stepper>
+       )} 
       {activeStep === steps.length ? (
         "The step completed"
       ) : (
@@ -91,44 +95,7 @@ const MultiStepForm = () => {
             {activeStep === steps.length ? "Finish" : "Next"}
           </Button>
         </>
-      )} */}
-
-      {/* <myDiv> */}
-      {activeStep < steps.length - 1 && (
-
-        <div activeStep={activeStep} alternativeLabel className="stepBlock">
-          <div className="stepWrapper">
-            {steps.map((label, labelIndex) => (
-              // <div >
-              // <Step key={label}>
-              //   <StepLabel onClick={() => setActiveStep(labelIndex)}>
-              //     {/* {label} */}
-              //     {activeStep < steps.length - 1 ? label : null}
-              //   </StepLabel>
-              //   </Step>
-              // </div>
-              <div key={label}>
-                <div className="circle" onClick={() => setActiveStep(labelIndex)}>{labelIndex + 1}</div>
-                <span>{label}</span>
-                {/* {activeStep < steps.length - 1 ? label : null} */}
-
-              </div>
-            ))}
-          </div>
-        </div>
       )}
-      {activeStep === steps.length ? (
-        // "The step completed"
-        <Button>Finish</Button>
-      ) : (
-        <>
-          {getStepsContent(activeStep)}
-          <Button onClick={handleNext}>
-            {activeStep === steps.length ? "Finish" : "Next"}
-          </Button>
-        </>
-      )}
-      {/* </myDiv> */}
     </Div>
   );
 };

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StepThreeContainer = styled.div`
-margin-top: 5rem;
+/* margin-top: 5rem; */
   .main {
     /* background: #fff; */
     text-align: center;

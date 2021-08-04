@@ -17,7 +17,8 @@ const StepTwo = () => {
   return (
    
     <MainDiv>
-      <Box sx={{ width: 300, marginLeft: 50}}>
+      {/* <Box sx={{ width: 300, marginLeft: 50}}> */}
+      <Box>
         <Slider
           aria-label="restricted values"
           defaultValue={0}
