@@ -53,7 +53,7 @@ export const Div = styled.div`
     flex-direction:row;
     width:300px;
     height:80px;
-    border:1px red solid;
+    /* border:1px red solid; */
     
     padding:0 5px; /* this */    
   }
